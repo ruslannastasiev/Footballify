@@ -7,6 +7,10 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
+gem "shoulda-matchers"
+gem "factory_girl", "~> 4.2.0"
+gem "database_cleaner", "~> 0.9.1"
+gem 'rspec-rails'
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
