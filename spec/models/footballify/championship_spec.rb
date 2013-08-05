@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 module Footballify
+
   describe Championship do
 
     it { should validate_presence_of(:name) }    
@@ -8,4 +9,5 @@ module Footballify
     it { should have_many(:teams) }
     
   end
+  
 end

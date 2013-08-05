@@ -6,7 +6,7 @@ FactoryGirl.define do
 
   factory :team, :class => Footballify::Team do |team|
    sequence(:name) {|n| "team #{n}"}
-   championship 
+   championship
   end
 
   factory :score, :class => Footballify::Score do |score|
