@@ -1,4 +1,5 @@
 module Footballify
+
   class Score < ActiveRecord::Base
 
     attr_accessible :team1_score, :team2_score, :team1_id, :team2_id, :team1, :team2, :season_id, :round
@@ -11,4 +12,5 @@ module Footballify
     end
     
   end
+  
 end

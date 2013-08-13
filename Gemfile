@@ -8,7 +8,7 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 gem "shoulda-matchers"
-gem "factory_girl", "~> 4.2.0"
+gem "factory_girl"
 gem "database_cleaner", "~> 0.9.1"
 gem 'rspec-rails'
 
