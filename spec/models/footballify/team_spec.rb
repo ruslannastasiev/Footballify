@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 module Footballify
+
   describe Team do
 
     let(:championship) { create (:championship) }
@@ -12,7 +13,6 @@ module Footballify
     let!(:score4) { create :score, team1_id: team2.id, team2_id: team1.id, team1_score: "3", team2_score: "2" }
     let!(:score5) { create :score, team1_id: team2.id, team2_id: team1.id, team1_score: "3", team2_score: "1" }
     let!(:score6) { create :score, team1_id: team2.id, team2_id: team1.id, team1_score: "2", team2_score: "2" }
-
 
     it { should validate_presence_of(:name) }  
     it { should ensure_length_of(:name).is_at_most(100) }
@@ -47,5 +47,7 @@ module Footballify
     it "should calculate guest_scores" do
       expect(team1.team2_scores.count).to eq(3) 
     end
+
   end
+
 end
