@@ -44,6 +44,11 @@ module Footballify
                  {team1_id: 4, team2_id: 2, round: 3},
                  {team1_id: 2, team2_id: 4, round: 6}]
         expect(scores).to eq(result)
+<<<<<<< HEAD
+        
+        print scores
+=======
+>>>>>>> master
       end
       
     end
