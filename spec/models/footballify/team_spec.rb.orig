@@ -19,6 +19,39 @@ module Footballify
     it { should validate_presence_of(:championship) }
     it { should have_many(:team1_scores) }
     it { should have_many(:team2_scores) }
+
+    it "should calculate winnings" do    
+      expect(team1.won).to eq(2)
+    end
+
+    it "should calculate losses" do    
+      expect(team1.lost).to eq(2)
+    end
+
+    it "should calculate draws" do    
+      expect(team1.drawn).to eq(2)
+    end
+
+    it "should calculate goal_for" do    
+      expect(team1.goal_for).to eq(15)
+    end
+
+    it "should calculate goal_against" do    
+      expect(team1.goal_against).to eq(14)
+    end
+
+    it "should calculate home_scores" do
+      expect(team1.team1_scores.count).to eq(3) 
+    end
+
+    it "should calculate guest_scores" do
+      expect(team1.team2_scores.count).to eq(3) 
+    end
+
   end
 
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> master
