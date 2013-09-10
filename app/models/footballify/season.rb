@@ -1,4 +1,5 @@
 require "footballify/season_drawer"
+require "footballify/results_table"
 module Footballify
 
   class Season < ActiveRecord::Base
@@ -10,6 +11,10 @@ module Footballify
     def start_season      
       drawer = SeasonDrawer.new championship.teams.map(&:id)
       drawer.draw { |left_column, right_column, round| self.scores.create! team1_id: left_column, team2_id: right_column, round: round }
+    end
+
+    def draw_table
+      ResultsTable.new(scores).draw
     end
 
   end
